@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Dearest Muhtarma ✨</title>
+    <title>A Special Message For Muhtarma 🌙✨</title>
     <style>
         * {
             box-sizing: border-box;
@@ -11,169 +11,163 @@
             padding: 0;
         }
         body {
-            background: linear-gradient(135deg, #1f1124, #3a1c38, #5c1d42);
+            background: radial-gradient(circle at center, #1b1b2f, #161622, #0d0d15);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            color: #f5f5f7;
             overflow-x: hidden;
             padding: 20px;
         }
-        .container {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 30px 20px;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            max-width: 420px;
+        .wrapper {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 35px 25px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            max-width: 440px;
             width: 100%;
             text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
             position: relative;
             z-index: 2;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .badge {
-            background: rgba(255, 105, 180, 0.2);
-            color: #ff9ee2;
-            padding: 6px 14px;
+        .tag {
+            background: rgba(212, 175, 55, 0.15);
+            color: #ffd700;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             display: inline-block;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 105, 180, 0.4);
+            margin-bottom: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         h1 {
-            font-size: 26px;
-            color: #ffb8d9;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
-        .subtitle {
-            font-size: 14px;
-            color: #ddd;
+        .sub {
+            font-size: 13px;
+            color: #9ba1a6;
+            margin-bottom: 30px;
+        }
+        .note-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 25px 20px;
             margin-bottom: 25px;
-        }
-        .card-box {
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 18px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            min-height: 110px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
-        #wishText {
+        #messageBox {
             font-size: 16px;
-            line-height: 1.6;
-            color: #fff1f8;
+            line-height: 1.7;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
         }
-        .btn {
-            background: linear-gradient(135deg, #ff4b91, #ff758c);
+        .action-btn {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
             color: white;
             border: none;
-            padding: 12px 22px;
-            border-radius: 30px;
-            font-size: 15px;
-            font-weight: bold;
+            padding: 14px 24px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
-            box-shadow: 0 5px 15px rgba(255, 75, 145, 0.4);
-            transition: all 0.3s ease;
-            margin-bottom: 10px;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            transition: transform 0.2s, opacity 0.2s;
         }
-        .btn:active {
-            transform: scale(0.96);
+        .action-btn:active {
+            transform: scale(0.97);
         }
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: none;
-        }
-        .footer-note {
-            margin-top: 20px;
+        .counter {
+            margin-top: 15px;
             font-size: 12px;
-            color: #aaa;
+            color: #64748b;
         }
-        /* Floating Hearts Animation */
-        .heart {
+        /* Star Effect */
+        .star {
             position: absolute;
-            color: #ff4b91;
-            font-size: 20px;
-            animation: floatUp 4s linear infinite;
-            opacity: 0;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
             z-index: 1;
         }
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
-            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="badge">🐼 BUBU & DUDU SPECIAL VIBES 🤍</div>
-        <h1>For My Dearest Muhtarma</h1>
-        <p class="subtitle">Bubu aur Dudu ki taraf se aapke liye dil se khaas wishes! ✨</p>
+    <!-- Background Stars -->
+    <script>
+        for (let i = 0; i < 25; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            document.body.appendChild(star);
+        }
+    </script>
 
-        <div class="card-box">
-            <p id="wishText">Suno Muhtarma... Aapki smile meri poori duniya hai! 🌸💖</p>
+    <div class="wrapper">
+        <div class="tag">✨ Exclusive For Muhtarma ✨</div>
+        <h1>Kuch Khaas Baatein</h1>
+        <p class="sub">Tap karke dekho, har note mein ek alag hi vibe hai! 🤍</p>
+
+        <div class="note-card">
+            <p id="messageBox">Suno Muhtarma... Aapki presence hi sab kuch itna peaceful bana deti hai. 🌙✨</p>
         </div>
 
-        <button class="btn" onclick="changeWish()">✨ Aur Pyari Wishes Dekho</button>
-        <button class="btn btn-secondary" onclick="spawnHeart()">❤️ Send Heart</button>
-
-        <div class="footer-note">Made with plenty of 🐼 love, cuddles, and smiles for Muhtarma.</div>
+        <button class="action-btn" onclick="nextNote()">Agli Baat Padho 💌</button>
+        <div class="counter" id="counterText">Note 1 of 5</div>
     </div>
 
     <script>
-        const wishes = [
-            "Suno Muhtarma... Aapki smile meri poori duniya hai! 🌸💖",
-            "Jaise Bubu aur Dudu hamesha sath rehte hain, waise hi meri dua hai aap hamesha khush raho! 🧸✨",
-            "Aap jab hasta ho na, toh lagta hai saare phool ek sath khil gaye hon! 🌹🙈",
-            "Bina kisi wajah ke aapko yaad karna meri aadat ban gayi hai! 🥺💕",
-            "Muhtarma, aap bohot special ho aur hamesha rahogi! 🦋✨"
+        const notes = [
+            "Suno Muhtarma... Aapki presence hi sab kuch itna peaceful bana deti hai. 🌙✨",
+            "Aapki baaton mein aisi ajeeb si khichav aur sukoon hai jo kahin aur nahi milta. 🕊️💫",
+            "Kabhi socha nahi tha ke koi itna random hokar bhi itna special ban sakta hai! 🦋",
+            "Aapki muskaan dekh kar lagta hai ke duniya ki saari fikar bekaar hai. ☕🤍",
+            "Bas yunhi hasti raho, kyunki ye smile aap par sabse zyada jachti hai! ✨"
         ];
 
-        let currentIndex = 0;
+        let index = 0;
 
-        function changeWish() {
-            currentIndex = (currentIndex + 1) % wishes.length;
-            const textElement = document.getElementById("wishText");
-            textElement.style.opacity = 0;
+        function nextNote() {
+            index = (index + 1) % notes.length;
+            const box = document.getElementById("messageBox");
+            box.style.opacity = 0;
+            box.style.transform = "translateY(10px)";
+            
             setTimeout(() => {
-                textElement.innerText = wishes[currentIndex];
-                textElement.style.opacity = 1;
+                box.innerText = notes[index];
+                box.style.opacity = 1;
+                box.style.transform = "translateY(0)";
+                document.getElementById("counterText").innerText = `Note ${index + 1} of ${notes.length}`;
             }, 200);
-            spawnHeart();
         }
 
-        function spawnHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "💖";
-            heart.style.left = Math.random() * window.innerWidth + "px";
-            heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 4000);
-        }
-
-        // Add smooth opacity transition to wish text
-        document.getElementById("wishText").style.transition = "opacity 0.2s ease-in-out";
+        document.getElementById("messageBox").style.transition = "all 0.3s ease";
     </script>
 </body>
 </html>
