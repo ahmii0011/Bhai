@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Muhtarma ✨</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #1f1124, #3a1c38, #5c1d42);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .badge {
+            background: rgba(255, 105, 180, 0.2);
+            color: #ff9ee2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 105, 180, 0.4);
+        }
+        h1 {
+            font-size: 26px;
+            color: #ffb8d9;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+        .card-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            min-height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #wishText {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #fff1f8;
+        }
+        .btn {
+            background: linear-gradient(135deg, #ff4b91, #ff758c);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(255, 75, 145, 0.4);
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: none;
+        }
+        .footer-note {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            color: #ff4b91;
+            font-size: 20px;
+            animation: floatUp 4s linear infinite;
+            opacity: 0;
+            z-index: 1;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="badge">🐼 BUBU & DUDU SPECIAL VIBES 🤍</div>
+        <h1>For My Dearest Muhtarma</h1>
+        <p class="subtitle">Bubu aur Dudu ki taraf se aapke liye dil se khaas wishes! ✨</p>
+
+        <div class="card-box">
+            <p id="wishText">Suno Muhtarma... Aapki smile meri poori duniya hai! 🌸💖</p>
+        </div>
+
+        <button class="btn" onclick="changeWish()">✨ Aur Pyari Wishes Dekho</button>
+        <button class="btn btn-secondary" onclick="spawnHeart()">❤️ Send Heart</button>
+
+        <div class="footer-note">Made with plenty of 🐼 love, cuddles, and smiles for Muhtarma.</div>
+    </div>
+
+    <script>
+        const wishes = [
+            "Suno Muhtarma... Aapki smile meri poori duniya hai! 🌸💖",
+            "Jaise Bubu aur Dudu hamesha sath rehte hain, waise hi meri dua hai aap hamesha khush raho! 🧸✨",
+            "Aap jab hasta ho na, toh lagta hai saare phool ek sath khil gaye hon! 🌹🙈",
+            "Bina kisi wajah ke aapko yaad karna meri aadat ban gayi hai! 🥺💕",
+            "Muhtarma, aap bohot special ho aur hamesha rahogi! 🦋✨"
+        ];
+
+        let currentIndex = 0;
+
+        function changeWish() {
+            currentIndex = (currentIndex + 1) % wishes.length;
+            const textElement = document.getElementById("wishText");
+            textElement.style.opacity = 0;
+            setTimeout(() => {
+                textElement.innerText = wishes[currentIndex];
+                textElement.style.opacity = 1;
+            }, 200);
+            spawnHeart();
+        }
+
+        function spawnHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💖";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        // Add smooth opacity transition to wish text
+        document.getElementById("wishText").style.transition = "opacity 0.2s ease-in-out";
+    </script>
+</body>
+</html>
