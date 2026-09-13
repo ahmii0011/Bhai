@@ -1,193 +1,79 @@
 <!DOCTYPE html>
-<html lang="ur" dir="ltr" class="scroll-smooth">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Dear Muhtarma 🐼🤍 | Special Animation</title>
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-<!-- FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script>
-tailwind.config = {
-theme: {
-extend: {
-fontFamily: {
-sans: ['Plus Jakarta Sans', 'sans-serif'],
-serif: ['Playfair Display', 'serif'],
-},
-colors: {
-bubuPink: {
-50: '#fff5f7',
-100: '#ffe0e9',
-500: '#ff4d79',
-600: '#e0315f',
-}
-}
-}
-}
-}
-</script>
-<style>
-.glass-card {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(16px);
--webkit-backdrop-filter: blur(16px);
-border: 1px solid rgba(255, 255, 255, 0.25);
-}
-.romantic-gradient {
-background: radial-gradient(circle at top, rgba(255, 77, 121, 0.3), transparent 50%),
-radial-gradient(circle at bottom, rgba(168, 85, 247, 0.3), transparent 50%),
-#0f051d;
-}
-@keyframes fadeInOut {
-0% { opacity: 0; transform: scale(0.95) translateY(10px); }
-100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-.animate-step {
-animation: fadeInOut 0.8s ease-out forwards;
-}
-.hidden-step {
-display: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift For Muhtarma ✨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffd1dc, #ff9aa2, #ffb7b2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            animation: popUp 1s ease-in-out;
+        }
+        @keyframes popUp {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animals {
+            font-size: 55px;
+            margin-bottom: 15px;
+            letter-spacing: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        h1 {
+            color: #d63384;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .signature {
+            font-weight: bold;
+            color: #ff477e;
+            font-size: 17px;
+        }
+    </style>
 </head>
-<body class="romantic-gradient text-slate-100 font-sans min-h-screen selection:bg-bubuPink-500 selection:text-white overflow-x-hidden flex flex-col justify-between items-center py-10 px-4">
-<!-- Floating Background Effects -->
-<div class="fixed inset-0 pointer-events-none z-0 opacity-40">
-<div class="absolute top-12 left-10 text-bubuPink-500 text-2xl animate-bounce">💖</div>
-<div class="absolute top-1/3 right-12 text-pink-300 text-2xl animate-pulse">🌸</div>
-<div class="absolute bottom-24 left-1/5 text-purple-400 text-3xl animate-bounce">✨</div>
-</div>
-<!-- Main Container -->
-<div class="relative z-10 max-w-xl w-full mx-auto flex flex-col items-center text-center space-y-8 my-auto">
-<!-- Top Badge -->
-<div id="top-badge" class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card text-pink-300 text-xs font-semibold tracking-wide uppercase shadow-lg">
-<span>🐼 Bubu-Dudu Animation Sequence 🤍</span>
-</div>
-<!-- STEP 1: Bubu Appears with Flower -->
-<div id="step-bubu" class="w-full space-y-6 animate-step">
-<div class="space-y-2">
-<h1 class="text-3xl md:text-4xl font-serif font-bold text-pink-200">
-Bubu aagaya hai... 🧸✨
-</h1>
-<p class="text-slate-300 text-sm">Pehle Bubu aapko ek pyaara sa phool dene aaya hai! 🌹</p>
-</div>
-<div class="relative w-full max-w-sm mx-auto rounded-3xl overflow-hidden glass-card p-3 shadow-2xl shadow-bubuPink-500/30">
-<img src="watermarked_img_5882428818991411462.png" alt="Bubu with Flower" class="w-full h-auto rounded-2xl object-cover">
-<div class="absolute bottom-6 left-6 right-6 glass-card py-2 px-3 rounded-xl backdrop-blur-md">
-<p class="text-xs font-medium text-pink-100">"Yeh phool sirf Muhtarma ke liye! 🌹"</p>
-</div>
-</div>
-<div>
-<button onclick="nextStep(2)" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-bubuPink-500 to-purple-600 text-white font-bold text-sm shadow-lg shadow-bubuPink-500/30 hover:scale-105 transition duration-300">
-<span>Aage Dekho (Dudu aane wala hai) 👉</span>
-</button>
-</div>
-</div>
-<!-- STEP 2: Dudu Appears -->
-<div id="step-dudu" class="w-full space-y-6 hidden-step">
-<div class="space-y-2">
-<h1 class="text-3xl md:text-4xl font-serif font-bold text-pink-200">
-Aur ab Dudu bhi aagaya! 🥛✨
-</h1>
-<p class="text-slate-300 text-sm">Dudu aapke liye dher saara pyaar lekar aaya hai! 🥰</p>
-</div>
-<div class="relative w-full max-w-sm mx-auto rounded-3xl overflow-hidden glass-card p-3 shadow-2xl shadow-bubuPink-500/30">
-<img src="watermarked_img_1335275235034082732.png" alt="Dudu with Gift" class="w-full h-auto rounded-2xl object-cover">
-<div class="absolute bottom-6 left-6 right-6 glass-card py-2 px-3 rounded-xl backdrop-blur-md">
-<p class="text-xs font-medium text-pink-100">"Dudu ki taraf se special treat! 🥛🤍"</p>
-</div>
-</div>
-<div class="flex justify-center gap-4">
-<button onclick="nextStep(1)" class="px-5 py-3 rounded-2xl glass-card text-white text-xs font-semibold hover:bg-white/15 transition">
-⬅️ Peeche
-</button>
-<button onclick="nextStep(3)" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-bubuPink-500 to-purple-600 text-white font-bold text-sm shadow-lg shadow-bubuPink-500/30 hover:scale-105 transition duration-300">
-<span>✨ Ab Wishes Start Hoti Hain! 💖</span>
-</button>
-</div>
-</div>
-<!-- STEP 3: Full Wishes Section -->
-<div id="step-wishes" class="w-full space-y-6 hidden-step animate-step">
-<div class="space-y-2">
-<h1 class="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-white via-pink-200 to-bubuPink-500 bg-clip-text text-transparent">
-For My Dearest Muhtarma 🌸
-</h1>
-<p class="text-slate-300 text-sm">Bubu aur Dudu ki taraf se aapke liye dil se khaas wishes! ✨</p>
-</div>
-<!-- Interactive Wishes Box -->
-<div class="w-full glass-card p-6 md:p-8 rounded-3xl shadow-xl space-y-6 text-left relative overflow-hidden">
-<div class="absolute -top-10 -right-10 w-32 h-32 bg-bubuPink-500/15 rounded-full blur-2xl"></div>
-<div class="flex items-center space-x-3 border-b border-white/10 pb-4">
-<span class="text-2xl">💝</span>
-<h3 class="font-bold text-base text-white">Muhtarma ke Liye Khaas Paigam...</h3>
-</div>
-<p id="sweet-note" class="text-slate-200 text-sm md:text-base leading-relaxed font-light min-h-[80px]">
-"Muhtarma, Allah aapko hamesha hansta-muskurata rakhe. Aapki har khwahish poori ho aur zindagi mein kabhi koi gham ya pareshani na aaye! 🌸✨"
-</p>
-<div class="flex flex-col sm:flex-row gap-3 pt-2">
-<button onclick="changeNote()" class="flex-1 py-3 px-5 rounded-2xl bg-gradient-to-r from-bubuPink-500 to-purple-600 text-white font-bold text-xs shadow-lg shadow-bubuPink-500/30 hover:scale-105 transition duration-300 flex items-center justify-center space-x-2">
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-<span>✨ Aur Pyari Wishes Dekho</span>
-</button>
-<button onclick="sendLove()" class="py-3 px-5 rounded-2xl glass-card text-white font-bold text-xs hover:bg-white/15 transition duration-300 flex items-center justify-center space-x-2">
-<span>💖 Send Heart</span>
-</button>
-</div>
-</div>
-<div>
-<button onclick="nextStep(1)" class="text-slate-400 text-xs hover:text-pink-300 transition underline">
-🔄 Animation Phir Se Dekho
-</button>
-</div>
-</div>
-</div>
-<!-- Footer -->
-<footer class="text-slate-400 text-xs pt-6 text-center z-10">
-<p>Made with plenty of 🐼 love, cuddles, and smiles for Muhtarma.</p>
-<p>© 2026 | Special Web Dedication ✨</p>
-</footer>
-<!-- JavaScript for Step Navigation & Wishes -->
-<script>
-function nextStep(stepNumber) {
-document.getElementById('step-bubu').classList.add('hidden-step');
-document.getElementById('step-dudu').classList.add('hidden-step');
-document.getElementById('step-wishes').classList.add('hidden-step');
-if (stepNumber === 1) {
-document.getElementById('step-bubu').classList.remove('hidden-step');
-document.getElementById('step-bubu').classList.add('animate-step');
-} else if (stepNumber === 2) {
-document.getElementById('step-dudu').classList.remove('hidden-step');
-document.getElementById('step-dudu').classList.add('animate-step');
-} else if (stepNumber === 3) {
-document.getElementById('step-wishes').classList.remove('hidden-step');
-document.getElementById('step-wishes').classList.add('animate-step');
-}
-}
-const wishes = [
-"Muhtarma, Allah aapko hamesha hansta-muskurata rakhe. Aapki har khwahish poori ho aur zindagi mein kabhi koi gham ya pareshani na aaye! 🌸✨",
-"Jese Bubu aur Dudu har mushkil mein ek dusre ka sath dete hain, waise hi aapki har kamiyabi mein khuda aapke sath ho. You are truly precious! 🤍",
-"Aapka yeh cute sa attitude aur pyara sa andaaz sabse alag hai. Hamesha aise hi khush raho aur chamakti raho, Muhtarma! 🌟💖",
-"Zindagi mein jitni bhi khushiyan hain, woh sab aapke kadam choomein. Aaj ka din aapke liye bohot saare surprises lekar aaye! 🌷🎉",
-"Bina kisi wajah ke bas yeh yaad dilana tha ke aap bohot special ho aur aapki izzat dil se ki jati hai! Stay blessed always! 🐼✨",
-"Aapki muskan aisi hai jo kisi ka bhi din bana sakti hai. Khuda aapko hamesha salamat rakhiye! 🌹🤍"
-];
-function changeNote() {
-const randomIndex = Math.floor(Math.random() * wishes.length);
-const noteElement = document.getElementById('sweet-note');
-noteElement.style.opacity = 0;
-setTimeout(() => {
-noteElement.innerText = "${wishes[randomIndex]}";
-noteElement.style.opacity = 1;
-noteElement.style.transition = 'opacity 0.4s ease-in-out';
-}, 200);
-}
-function sendLove() {
-alert("💖 Bubu aur Dudu ki taraf se Muhtarma ke liye dher saara dular aur pyaar successfully bhej diya gaya hai! 🥰✨");
-}
-</script>
+<body>
+
+    <div class="card">
+        <div class="animals">🐈 🐕🌹</div>
+        <h1>Suno Muhtarma... ✨</h1>
+        <p>
+            Aapke liye ye choti si, pyari si aur aesthetic website banayi hai! 🥺💖<br><br>
+            Jaise ye dog aapko flower de raha hai, waise hi meri dua hai ke aapki zindagi hamesha khushiyon aur gulab ke phoolon ki tarah mehakti rahe! 🌸✨<br><br>
+            Aap bohot special ho, kabhi yeh mat bhoolna! 🙈💕
+        </p>
+        <div class="signature">Bheja gaya hai sirf aapke liye! 💌</div>
+    </div>
+
 </body>
 </html>
+
+
